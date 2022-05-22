@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/dt/eleventy-plugin-feathericons.svg)](https://npmjs.com/package/eleventy-plugin-feathericons)
 [![license](https://img.shields.io/npm/l/eleventy-plugin-feathericons.svg)](https://npmjs.com/package/eleventy-plugin-feathericons)
 
-An Eleventy [shortcode](https://www.11ty.dev/docs/shortcodes/) that generates [Feather icons](https://feathericons.com/).
+An Eleventy [shortcode](https://www.11ty.dev/docs/shortcodes/), allows [Feather icons](https://feathericons.com/) to be embedded as inline svg into templates.
 
 ## Installation
 Install the plugin from [npm](https://www.npmjs.com/package/eleventy-plugin-feathericons):
