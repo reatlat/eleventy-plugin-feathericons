@@ -32,6 +32,6 @@
   "homepage": "https://github.com/reatlat/eleventy-plugin-feathericons#readme",
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "feather-icons": "^4.29.0"
+    "feather-icons": "^4.29.1"
   }
 }
