@@ -1,4 +1,5 @@
 const feather = require('feather-icons');
+const cheerio = require('cheerio');
 
 module.exports = (eleventyConfig, attributes = {}) => {
 
@@ -26,6 +27,13 @@ module.exports = (eleventyConfig, attributes = {}) => {
 
         attributes = { ...globalAttributes, ...attributes };
 
-        return feather.icons[iconName].toSvg(attributes)
+        const $ = cheerio.load(feather.icons[iconName].toSvg(attributes), {
+            xmlMode: true
+        });
+
+        // Remove the icon from the accessibility tree. TY to @FlorianBoe
+        $(`svg`).attr(`aria-hidden`, 'true');
+
+        return $.html().trim();
     });
 };
