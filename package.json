@@ -32,7 +32,7 @@
   "homepage": "https://github.com/reatlat/eleventy-plugin-feathericons#readme",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "^1.0.0",
     "feather-icons": "^4.29.1"
   }
 }
