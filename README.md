@@ -104,5 +104,13 @@ If you notice an issue, feel free to [open an issue](https://github.com/reatlat/
 5. Serve locally `npm run dev`
 
 
+## Demo
+
+Check out the [live demo](https://eleventy-plugin-feathericons.netlify.app/).
+
+
 ## License
+
 The code is available under the [MIT license](LICENSE).
+
+Crafted by [Alex Zappa](https://alex.zappa.dev/?utm_source=eleventy-plugin-feathericons) at [FreshJuice](https://freshjuice.dev/?utm_source=eleventy-plugin-feathericons).
