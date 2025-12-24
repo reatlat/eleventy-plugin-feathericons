@@ -16,6 +16,16 @@ npm install eleventy-plugin-feathericons --save-dev
 Add it to your [Eleventy Config](https://www.11ty.dev/docs/config/) file:
 
 ```js
+// ESM (Eleventy 3.0+)
+import eleventyPluginFeathericons from 'eleventy-plugin-feathericons';
+
+export default function (eleventyConfig) {
+    eleventyConfig.addPlugin(eleventyPluginFeathericons);
+};
+```
+
+```js
+// CommonJS (Eleventy 2.x)
 const eleventyPluginFeathericons = require('eleventy-plugin-feathericons');
 
 module.exports = function (eleventyConfig) {
@@ -27,9 +37,9 @@ module.exports = function (eleventyConfig) {
 Advanced usage:
 
 ```js
-const eleventyPluginFeathericons = require('eleventy-plugin-feathericons');
+import eleventyPluginFeathericons from 'eleventy-plugin-feathericons';
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyPluginFeathericons, {
         "class": "feather feather-x",
         "xmlns": "http://www.w3.org/2000/svg",
@@ -57,7 +67,7 @@ into HTML code like this:
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
      class="feather feather-feather feather-x">
     <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
     <line x1="16" y1="8" x2="2" y2="22"></line>
@@ -68,11 +78,19 @@ into HTML code like this:
 
 ## Custom Usage
 
+### With attributes object (Nunjucks)
+
 ```nunjucks
 {% feather "activity", {
     "stroke": "#ff0000",
     "stroke-width": 3
 } %}
+```
+
+### With extra classes (Liquid/Nunjucks)
+
+```liquid
+{% feather "activity" "my-custom-class" %}
 ```
 
 
@@ -88,7 +106,3 @@ If you notice an issue, feel free to [open an issue](https://github.com/reatlat/
 
 ## License
 The code is available under the [MIT license](LICENSE).
-
-
-## May the 4th be with you
-<img src="https://cdn.sunnypixels.io/imgs/yoda-close-up.jpg" alt="May 4th be with you" width="280">

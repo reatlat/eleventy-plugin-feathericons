@@ -1,8 +1,16 @@
 {
   "name": "eleventy-plugin-feathericons",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Feather is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency, and flexibility.",
-  "main": ".eleventy.js",
+  "type": "module",
+  "main": ".eleventy.cjs",
+  "module": ".eleventy.js",
+  "exports": {
+    ".": {
+      "import": "./.eleventy.js",
+      "require": "./.eleventy.cjs"
+    }
+  },
   "scripts": {
     "build": "cd demo/; npx eleventy",
     "dev": "cd demo/; npx eleventy --serve",
@@ -31,8 +39,13 @@
   },
   "homepage": "https://github.com/reatlat/eleventy-plugin-feathericons#readme",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "cheerio": "^1.0.0-rc.12",
-    "feather-icons": "^4.29.1"
+    "feather-icons": "^4.29.2",
+    "linkedom": "^0.18.12"
+  },
+  "peerDependencies": {
+    "@11ty/eleventy": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
   }
 }

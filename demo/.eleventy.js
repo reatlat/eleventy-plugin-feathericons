@@ -1,5 +1,5 @@
-const eleventyPluginFeathericons = require("../.eleventy.js");
+import eleventyPluginFeathericons from '../.eleventy.js';
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyPluginFeathericons, {});
 };

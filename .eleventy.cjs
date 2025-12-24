@@ -1,7 +1,7 @@
-import feather from 'feather-icons';
-import { parseHTML } from 'linkedom';
+const feather = require('feather-icons');
+const { parseHTML } = require('linkedom');
 
-export default (eleventyConfig, attributes = {}) => {
+module.exports = (eleventyConfig, attributes = {}) => {
 
     const defaultAttributes = {
         "class": "feather feather-x",

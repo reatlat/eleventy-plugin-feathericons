@@ -1,0 +1,81 @@
+---
+permalink: /test-liquid/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liquid Test - 11ty Plugin Feather Icons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="py-14 px-8">
+<div class="max-w-3xl mx-auto">
+    <h1 class="text-2xl font-bold mb-8">Liquid Template Test</h1>
+
+    <h2 class="text-xl font-semibold mt-8 mb-4">Basic Usage</h2>
+    <div class="flex flex-wrap gap-4 items-center">
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Heart:</p>
+            {% feather "heart" %}
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Star:</p>
+            {% feather "star" %}
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Sun:</p>
+            {% feather "sun" %}
+        </div>
+    </div>
+
+    <h2 class="text-xl font-semibold mt-8 mb-4">With Extra Classes (Liquid syntax)</h2>
+    <p class="text-sm text-gray-500 mb-4">Liquid syntax: <code>{% raw %}{% feather "icon" "extra-classes" %}{% endraw %}</code></p>
+    <div class="flex flex-wrap gap-4 items-center">
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Single class:</p>
+            {% feather "star" "text-yellow-500" %}
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Multiple classes:</p>
+            {% feather "zap" "text-orange-500 drop-shadow-lg" %}
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Tailwind hover:</p>
+            {% feather "heart" "text-red-500 hover:text-red-700 transition-colors cursor-pointer" %}
+        </div>
+    </div>
+
+    <h2 class="text-xl font-semibold mt-8 mb-4">Various Icons</h2>
+    <div class="flex flex-wrap gap-4 items-center">
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">home</p>
+            {% feather "home" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">settings</p>
+            {% feather "settings" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">user</p>
+            {% feather "user" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">mail</p>
+            {% feather "mail" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">bell</p>
+            {% feather "bell" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">search</p>
+            {% feather "search" %}
+        </div>
+    </div>
+
+    <hr class="my-8">
+    <p class="text-sm text-gray-500">Built with {{ eleventy.generator }}</p>
+</div>
+</body>
+</html>
